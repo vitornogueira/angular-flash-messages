@@ -1,0 +1,27 @@
+{
+  "name": "angular-flash-messages",
+  "version": "0.1.0",
+  "description": "lightweight flash messages to your angular app",
+  "main": "angular-flash-messages.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitornogueira/angular-flash-messages.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "flash-messages"
+  ],
+  "author": "Vitor Nogueira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitornogueira/angular-flash-messages/issues"
+  },
+  "homepage": "https://github.com/vitornogueira/angular-flash-messages",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-ngmin": "^0.2.0"
+  }
+}

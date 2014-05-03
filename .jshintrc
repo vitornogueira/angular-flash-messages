@@ -1,0 +1,7 @@
+{
+	"browser": true,
+	"strict": true,
+	"indent": 2,
+	"unused": true,
+	"predef": ["App, console"]
+}

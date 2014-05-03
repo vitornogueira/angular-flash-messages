@@ -1,0 +1,56 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background-color: #f0f0f0;
+
+    font: normal 14px/1.2 Helvetica, Arial, sans-serif;
+    color: #444;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+div {
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 0.5em 0;
+    padding: 1em;
+    border: 1px solid #afeeee;
+
+    background-color: #afeeee;
+
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+
+    -webkit-transition: .3s ease;
+       -moz-transition: .3s ease;
+        -ms-transition: .3s ease;
+         -o-transition: .3s ease;
+            transition: .3s ease;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9de6e6;
+}
+
+button:focus {
+    border-color: #9de6e6;
+    outline: none;
+}
