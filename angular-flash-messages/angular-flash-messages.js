@@ -6,7 +6,7 @@ flashModule.directive('flash', function() {
   return {
     restrict: 'E',
     replace: true,
-    templateUrl: 'template.html',
+    templateUrl: 'angular-flash-messages/template.html',
     controller: function($scope, $rootScope, $timeout) {
       var time = 3000;
       var reset;
@@ -23,23 +23,39 @@ flashModule.directive('flash', function() {
         }
       };
 
-      $rootScope.$on('messages', function(event, message) {
+      $rootScope.$on('vn.flash.add', function(event, message) {
         $scope.messages.push(message);
 
         $timeout.cancel(reset);
 
         reset = $timeout(cleanMessages, time);
       });
+
+      $rootScope.$on('vn.flash.removeAll', function() {
+        var removeAll = function() {
+          $timeout.cancel(reset);
+
+          if ( $scope.messages.length ) {
+            $scope.messages.splice(0, 1);
+
+            $timeout(removeAll, 200);
+          }
+        };
+
+        removeAll();
+      });
     }
   };
 });
 
-flashModule.factory('Flash', ['$rootScope', function($rootScope) {
+flashModule.service('Flash', ['$rootScope', function($rootScope) {
   'use strict';
 
-  return {
-    add: function(message) {
-      $rootScope.$emit('messages', message);
-    }
+  this.add = function(message) {
+    $rootScope.$emit('vn.flash.add', message);
+  };
+
+  this.removeAll = function() {
+    $rootScope.$emit('vn.flash.removeAll');
   };
 }]);

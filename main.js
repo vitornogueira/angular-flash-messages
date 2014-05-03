@@ -13,5 +13,9 @@ App.controller('AppController', [
         text: 'This is a message'
       });
     };
+
+    $scope.clearMessages = function() {
+      Flash.removeAll();
+    };
   }
 ]);

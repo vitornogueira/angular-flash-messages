@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <title>Angular Flash Messages</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="angular-flash-messages.css">
+    <link rel="stylesheet" href="angular-flash-messages/angular-flash-messages.css">
 </head>
 <body data-ng-controller="AppController">
     <flash></flash>
     <h1>AngularJS Flash Messages</h1>
-    <div>
+    <main>
         <button data-ng-click="showMessage('info')">Show Info Message</button>
         <button data-ng-click="showMessage('success')">Show Success Message</button>
         <button data-ng-click="showMessage('warning')">Show Warning Message</button>
         <button data-ng-click="showMessage('danger')">Show Danger Message</button>
-    </div>
+        <button data-ng-click="clearMessages()">Remove All</button>
+    </main>
     <script src="angular.min.js"></script>
     <script src="angular-animate.min.js"></script>
-    <script src="angular-flash-messages.min.js"></script>
+    <script src="angular-flash-messages/angular-flash-messages.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

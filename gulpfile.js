@@ -4,7 +4,7 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
 var paths = {
-  scripts: ['angular-flash-messages.js']
+  scripts: ['angular-flash-messages/angular-flash-messages.js']
 };
 
 gulp.task('default', function() {
@@ -12,5 +12,5 @@ gulp.task('default', function() {
     .pipe(ngmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify({mangle: false}))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('angular-flash-messages/'));
 });
